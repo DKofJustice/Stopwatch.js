@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #665AE4;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.timerDisplay {
+
+}
