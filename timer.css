@@ -1,15 +1,66 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Oxanium", cursive;
 }
 
 .container {
-    background-color: #665AE4;
+    background-color: #062F4F;
     width: 100vw;
     height: 100vh;
-    
+    display: grid;
+    grid-template-areas: 
+        "timer timer"
+        "reset start"
+        "lap lap"
+        "footer footer";
+    box-shadow: inset 0px 20px 20px rgba(73, 37, 37, 0.3),
+                inset 0px 15px 15px rgba(73, 37, 37, 0.1);
 }
 
 .timerDisplay {
+    display: grid;
+    grid-area: timer;
+    width: 250px;
+    height: 250px;
+    margin-top: 3em;
+    border: 15px solid #EAC67A;
+    border-radius: 100%;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 20px 15px 15px rgba(6, 18, 22, 0.5),
+                20px 10px 10px rgba(0, 0, 0, 0.1),
+                inset 20px 15px 15px rgba(6, 18, 22, 0.5),
+                inset 20px 10px 10px rgba(0, 0, 0, 0.1),
+                -20px 15px 15px rgba(6, 18, 22, 0.5),
+                -20px 10px 10px rgba(0, 0, 0, 0.1),
+                inset -20px 15px 15px rgba(6, 18, 22, 0.5),
+                inset -20px 10px 10px rgba(0, 0, 0, 0.1);
+}
 
+.timerCount {
+    display: grid;
+    width: 80%;
+    height: 50px;
+    justify-self: center;
+    align-self: center;
+    font-size: 35px;
+    align-content: center;
+    justify-content: center;
+    font-weight: 800;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8),
+                5px 5px 5px rgba(0, 0, 0, 0.3);
+    color: #73B9B9;
+}
+
+.button {
+    width: 4em;
+    height: 4em;
+    border: 3px solid #EAC67A;
+    border-radius: 100%;
+}
+
+.lap-reset {
+    grid-area: reset;
+    
 }
