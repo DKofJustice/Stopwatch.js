@@ -67,6 +67,7 @@
     justify-content: center;
     align-content: center;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .button::before {
@@ -79,6 +80,11 @@
     bottom: 1px;
     border: 2px solid black;
     border-radius: 100%;
+}
+
+.button:active {
+    background-color: #EF4135;
+    border-color: #EF4135;
 }
 
 .lap-reset {
