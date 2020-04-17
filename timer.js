@@ -38,24 +38,27 @@ function stopwatch() {
 
         startTime = setInterval(start, 1);
 
-
+        //Calculating the time while stopwatch is paused
         if (stoppedTime != null) {
             stoppedDuration += (new Date() - stoppedTime);
         }
 
         running = true;
     } else if (running == true) {
+        //Pauses the stopwatch
         startButton.children[0].textContent = "start";
         lapReset.children[0].textContent = "reset";
 
-        stoppedTime = new Date();
+        stoppedTime = new Date(); //Creates new variable for paused time
         clearInterval(startTime);
 
         running = false;
     }
 }
 
+//Function for running stopwatch
 function start() {
+    //Calculates the stopwatch time
     let timeRunning = new Date(),
     timeElapsed = new Date(timeRunning - startDate - stoppedDuration);
 
@@ -86,10 +89,12 @@ function lapRes() {
         lap.setAttribute("class", "lap");
 
         lapContainer.appendChild(lap);
+
         lap.scrollIntoView();
         lap.textContent = timerCount.textContent;
     } else if (running == false) {
         //Resets the values to original
+        lapReset.children[0].textContent = "lap";
         startDate = null;
         startDateInit = false;
         stoppedDuration = null;
@@ -103,6 +108,6 @@ function lapRes() {
         timeRunning = null;
 
         clearInterval(startTime);
-        lapSection.removeChild(lapContainer);
+        lapSection.removeChild(lapContainer); //Removes laps at reset click
     }
 }
